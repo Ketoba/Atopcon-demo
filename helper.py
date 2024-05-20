@@ -29,7 +29,7 @@ def get_data_radius(latitude, longitude, bld_footprint, road_data, poi_data):
 
     # Create circle geometry
     circle_center = Point(longitude, latitude)
-    circle = circle_center.buffer(0.025)
+    circle = circle_center.buffer(0.0025)
 
     # Select features within the circle
     buildings_within_radius = bld_footprint[bld_footprint.geometry.intersects(circle)]
